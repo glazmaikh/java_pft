@@ -22,6 +22,14 @@ public class MyFirstProgram {
 		System.out.println("Hello, " + somebody + "!");
 	}
 
+	public static double area(Square s) {
+		return s.l * s.l;
+	}
+
+	public static double area(Rectangle r) {
+		return r.a * r.b;
+	}
+
 	public static double distance(Point p1, Point p2){
 		return Math.sqrt((p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y));
 	}

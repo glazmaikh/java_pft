@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useTestNG()
+}
+
+dependencies {
+    testImplementation 'org.testng:testng:7.7.1'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.8.3'
+}

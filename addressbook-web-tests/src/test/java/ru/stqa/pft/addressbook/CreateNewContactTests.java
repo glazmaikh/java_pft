@@ -8,8 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class CreateNewContactTests {
   private WebDriver wd;
 
-  @BeforeClass(alwaysRun = true)
-  public void setUp() throws Exception {
+  @BeforeMethod
+  public void setUp() {
     System.setProperty("webdriver.chrome.driver", "C://webdrivers/chromedriver.exe");
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -65,7 +65,7 @@ public class CreateNewContactTests {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  @AfterClass
+  @AfterMethod
   public void tearDown() {
     wd.findElement(By.linkText("Logout")).click();
     wd.quit();
